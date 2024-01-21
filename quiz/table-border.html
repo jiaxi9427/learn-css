@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <style>
+<head>
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 两列布局 */
+      grid-gap: 10px; /* 格子之间的间隔 */
+    }
+    
+    .gallery div {
+      width: 100%;
+      height: auto;
+      border: 1px solid #cccccc; /* 如果需要，可以添加边框 */
+      display: flex;
+      justify-content: center; /* 水平居中 */
+      align-items: center; /* 垂直居中 */
+    }
 
-        td {
-            width: 30vw;
-            height: 40vh;
-            text-align: center;
-        }
-
-        img {
-            max-height: 100%;
-            width: auto;
-            height: auto;
-        }
-      </style>
-    </head>
-    <body>
-        <img src="../images/meme.jpeg" alt="A meme">
-        <img src="../images/paper.jpeg" alt="Paper">
-        <img src="../images/students.jpeg" alt="people">
-        <img src="../images/noimg.jpeg" alt="No Image Found">
-        
-    </body>
+    .gallery img {
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <div><img src="../images/meme.jpeg" alt="A meme"></div>
+    <div><img src="../images/paper.jpeg" alt="Paper"></div>
+    <div><img src="../images/students.jpeg" alt="people"></div>
+    <div><img src="../images/noimg.jpeg" alt="No Image Found"></div>
+  </div>
+</body>
 </html>
